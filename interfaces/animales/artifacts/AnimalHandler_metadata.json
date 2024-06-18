@@ -1,0 +1,108 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "animal",
+				"outputs": [
+					{
+						"internalType": "contract IAnimal",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "interactuarConAnimal",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "sonido",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "comer",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "edad",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_animalAddress",
+						"type": "address"
+					}
+				],
+				"name": "setAnimal",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"interfaces/animales/AnimalHandler.sol": "AnimalHandler"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"interfaces/animales/AnimalHandler.sol": {
+			"keccak256": "0x5bc3cb5920d5ee80ee60e8fa48fecc81c0109cb5b44c30ccb68c07bcc600ac47",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a9ff0198e5af658297634cd89d6b12fad50b956f81e8c9fc386a51b189267ecf",
+				"dweb:/ipfs/Qma7jyhFknGspLrtCCPCoPtTyUSpsb4gHzZ57GXYbwDnGR"
+			]
+		},
+		"interfaces/animales/IAnimal.sol": {
+			"keccak256": "0x82f9a4b1164bc29717285c3e5610355ed76c9dfa490c562a63b8702d03504827",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dcd891420b1ccf753b78129b25ab2ba343cc289e93354db1cfe8af16f2e398bc",
+				"dweb:/ipfs/QmNgYVb72aTMPQMuiYgtUe6sM7F9tNmn7zKLjZfgrmAedW"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,122 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_edad",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "come",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getEdad",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getNombre",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "haceSonido",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"interfaces/animales/Gato.sol": "Gato"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"interfaces/animales/Gato.sol": {
+			"keccak256": "0x1518c811ec5111ec09e0c42cdd7b183a6164fc565d7a7a041018b00082514d8f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a81e6ee02f21c383486daf571c8208a79532336a4d5fa832c6d28affd27777fe",
+				"dweb:/ipfs/QmZwB4CUAAH7QqdLVSAz7RmwwU4u9SyDaW8NGXcdpjEX6J"
+			]
+		},
+		"interfaces/animales/IAnimal.sol": {
+			"keccak256": "0x82f9a4b1164bc29717285c3e5610355ed76c9dfa490c562a63b8702d03504827",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dcd891420b1ccf753b78129b25ab2ba343cc289e93354db1cfe8af16f2e398bc",
+				"dweb:/ipfs/QmNgYVb72aTMPQMuiYgtUe6sM7F9tNmn7zKLjZfgrmAedW"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,122 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_edad",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "come",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getEdad",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getNombre",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "haceSonido",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"interfaces/animales/Perro.sol": "Perro"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"interfaces/animales/IAnimal.sol": {
+			"keccak256": "0x82f9a4b1164bc29717285c3e5610355ed76c9dfa490c562a63b8702d03504827",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dcd891420b1ccf753b78129b25ab2ba343cc289e93354db1cfe8af16f2e398bc",
+				"dweb:/ipfs/QmNgYVb72aTMPQMuiYgtUe6sM7F9tNmn7zKLjZfgrmAedW"
+			]
+		},
+		"interfaces/animales/Perro.sol": {
+			"keccak256": "0x435b63b21b40fb4c6284f89f74c3a7d0270b96a5d981eb1be905f76b768973dc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c00922ca9b5c1c240df90c09f116e8a07f151106847d9bc07fb08260f3cb6cee",
+				"dweb:/ipfs/QmRiVMDE76ksY5SyP9ssRpMX5kRQHkTGKcpWf1LKoWfomp"
+			]
+		}
+	},
+	"version": 1
+}
