@@ -17,7 +17,7 @@ contract SubastaAvanzada {
     // Estado de la subasta (activa o inactiva)
     bool public subastaActiva;
     // Estado de la subasta (finalizada o no finalizada)
-    bool public subastaFinalizada;
+    // bool public subastaFinalizada;
     // Fecha de finalizacion de la subasta
     uint256 public fechaFinalizacion;
 
@@ -48,7 +48,8 @@ contract SubastaAvanzada {
         if (block.timestamp >= fechaFinalizacion && subastaActiva) {
             _finalizarSubasta();
         }
-        require(subastaActiva && !subastaFinalizada, "La subasta no esta activa o ya finalizo");
+        // require(subastaActiva && !subastaFinalizada, "La subasta no esta activa o ya finalizo");
+        require(subastaActiva, "La subasta no esta activa o ya finalizo");
         _;
     }
 
@@ -64,7 +65,7 @@ contract SubastaAvanzada {
         fechaInicio = _fechaInicio;
         duracion = _duracion;
         subastaActiva = true;
-        subastaFinalizada = false;
+        // subastaFinalizada = false;
         fechaFinalizacion = fechaInicio + duracion;
         mayorOferta = valorInicial;
         ofertanteGanador = address(0);
@@ -104,7 +105,7 @@ contract SubastaAvanzada {
     function _finalizarSubasta() internal {
         require(subastaActiva, "La subasta ya ha finalizado");
         subastaActiva = false;
-        subastaFinalizada = true;
+        // subastaFinalizada = true;
 
         // Transferir el NFT o el artículo ficticio al ganador
         // (Logica de transferencia del NFT no incluida por simplicidad)
@@ -114,7 +115,8 @@ contract SubastaAvanzada {
 
     // Funcion para mostrar el ganador de la subasta
     function mostrarGanador() public view returns (address, uint256) {
-        require(subastaFinalizada, "La subasta aun no ha finalizado");
+        // require(subastaFinalizada, "La subasta aun no ha finalizado");
+        require(!subastaActiva, "La subasta aun no ha finalizado");
         return (ofertanteGanador, mayorOferta);
     }
 
@@ -189,7 +191,8 @@ function mostrarOfertas() public view returns (address[] memory, uint256[] memor
 
     // Función para mostrar todas las ofertas realizadas, incluyendo las secretas si la subasta está finalizada o si el creador del contrato lo solicita
     function mostrarOfertasSecretas() public view returns (address[] memory, uint256[] memory) {
-        require(subastaFinalizada || msg.sender == creador, "No tienes permiso para ver las ofertas secretas");
+        // require(subastaFinalizada || msg.sender == creador, "No tienes permiso para ver las ofertas secretas");
+        require(!subastaActiva || msg.sender == creador, "No tienes permiso para ver las ofertas secretas");
         address[] memory ofertantesTodos = new address[](ofertantes.length);
         uint256[] memory montosTodos = new uint256[](ofertantes.length);
         for (uint256 i = 0; i < ofertantes.length; i++) {
@@ -218,7 +221,8 @@ function mostrarOfertas() public view returns (address[] memory, uint256[] memor
     // Funcion para retirar el deposito
 function retirarDeposito() public {
     require(ofertas[msg.sender].monto > 0, "No tienes deposito para retirar");
-    require(subastaFinalizada, "La subasta aun no ha finalizado");
+    // require(subastaFinalizada, "La subasta aun no ha finalizado");
+    require(!subastaActiva, "La subasta aun no ha finalizado");
 
     uint256 montoReembolso = ofertas[msg.sender].monto;
     ofertas[msg.sender].monto = 0;
